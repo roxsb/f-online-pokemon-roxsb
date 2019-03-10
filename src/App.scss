@@ -1,0 +1,57 @@
+.app{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app_header-title{
+  text-align: center;
+}
+
+.app_main{
+  margin:0; 
+  width: 100%;
+}
+
+.input_container{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 25px;
+  width: 800px;
+}
+
+.pokemon_filtered-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  list-style: none;
+}
+
+.app_field-input{
+ width: 200px;
+}
+
+.pokemon_card{
+ background-color: rgb(224, 224, 245);
+ width: 200px;
+ height: 250px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding-bottom: 15px;
+}
+
+.app_main-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemon_type{
+  list-style: none;
+}
+
+
+
+
