@@ -7,7 +7,7 @@ class Filter extends Component {
       <Fragment>
         <div className="input_container">
           <label className="app_field-label" htmlFor="search you Pokemon"></label>
-          <input className="app_field-input" type="text" placeholder="Look for your favorite Pokemon" onKeyUp={filterPokemonList}/>
+          <input className="app_field-input" type="text" placeholder="Look for your favorite Pokemon" onKeyUp={this.props.onkeyUpAction}/>
         </div>
       </Fragment>
     );

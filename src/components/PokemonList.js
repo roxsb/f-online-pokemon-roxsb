@@ -17,7 +17,7 @@ class PokemonList extends Component {
               return (
                 
                 <li className="pokemon_filtered-item" key={item.id}>
-                  <Link to={`/Pokemon/${item.id}`} className="list__item-link">              
+                  <Link to={`/Pokemon/${item.id}`} className="list_item-link">              
                     <PokemonCard 
                       item={item} 
                       id={item.id} 
@@ -38,7 +38,7 @@ class PokemonList extends Component {
         return (
           <div>                
             <ReactLoading />
-            <p className="loading">Wait one or two minutes -not a joke- for results </p>
+            <p className="loading">Not found </p>
           </div>
         );
       }

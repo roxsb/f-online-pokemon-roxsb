@@ -40,7 +40,25 @@
  display: flex;
  flex-direction: column;
  align-items: center;
- padding-bottom: 15px;
+ padding-bottom: 15px; 
+  transition: color ease 1s, border-color ease 1s;
+   &:hover {
+    color: red;
+    background-color:rgb(236, 226, 246);
+    
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+  }
+}
+
+.list_item-link{
+  text-decoration:none;
+}
+
+.link_return{
+    text-decoration: none;
+    color:red;
+    margin-top: 20px;
+    text-transform: uppercase;
 }
 
 .app_main-container{
