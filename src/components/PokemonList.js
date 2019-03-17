@@ -1,21 +1,38 @@
 import React, { Component } from "react";
 import PokemonCard from './PokemonCard';
 import ReactLoading from 'react-loading';
+import PokemonDetails from './PokemonDetails';
+import {Link} from 'react-router-dom';
 
 class PokemonList extends Component {
   render() {
-    const { filteredPokemon } = this.props;
-      if (filteredPokemon.length !== 0) {
+    const { listPokemonResult } = this.props;
+      if (listPokemonResult.length !== 0) {
         return (
           <ul className="pokemon_filtered-list">
-            {filteredPokemon.map(item => {
+            {listPokemonResult.map(item => {
+              // for (let i = 0; i < 25; i++) {
+              //   console.log( `${item.name}`);
+              // }
               return (
+                
                 <li className="pokemon_filtered-item" key={item.id}>
-                  <PokemonCard id={item.id} image={item.sprites.front_default} name={item.name} types={item.types} />
+                  <Link to={`/Pokemon/${item.id}`} className="list__item-link">              
+                    <PokemonCard 
+                      item={item} 
+                      id={item.id} 
+                      image={item.sprites.front_default} 
+                      name={item.name} 
+                      types={item.types} 
+                      height={item.height}
+                      weight={item.weight}
+                      // evolution={item.name[0]}
+                      />        
+                  </Link>                                  
                 </li>
                 );
               })}
-          </ul>
+            </ul>
         )
       } else {
         return (
