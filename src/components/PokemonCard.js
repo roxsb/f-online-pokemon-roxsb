@@ -2,7 +2,9 @@ import React, { Component, Fragment } from "react";
 
 class PokemonCard extends Component {
   render() {
-    const { id, image, name, types } = this.props;
+    const { id, image, name, types, evolution, listPokemonResult } = this.props;
+    
+      
     
     return (
       <Fragment>
@@ -13,7 +15,7 @@ class PokemonCard extends Component {
           </div> 
           <h2 className="pokemon_name">{name}</h2>
           <div className="pokemon_evolutions">
-            <p>Evoluciona de:{name}</p> 
+            <p></p> 
           </div>
           <ul className="pokemon_type">
             {types.map((item, index) => {

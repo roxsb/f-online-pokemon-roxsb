@@ -19,6 +19,7 @@ class PokemonList extends Component {
                 <li className="pokemon_filtered-item" key={item.id}>
                   <Link to={`/Pokemon/${item.id}`} className="list_item-link">              
                     <PokemonCard 
+                    listPokemonResult = {listPokemonResult}
                       item={item} 
                       id={item.id} 
                       image={item.sprites.front_default} 
@@ -26,6 +27,7 @@ class PokemonList extends Component {
                       types={item.types} 
                       height={item.height}
                       weight={item.weight}
+                      
                       // evolution={item.name[0]}
                       />        
                   </Link>                                  

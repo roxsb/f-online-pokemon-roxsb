@@ -9,8 +9,17 @@ class PokemonDetails extends Component {
     const {listPokemonResult} = this.props;      
     console.log('pokeid'+ pokemonId);
     const selectedPokemon = listPokemonResult[pokemonId -1];
+    const evolutionPokemon = listPokemonResult[pokemonId -2];
     const { id, image, name, types } = this.props;
     
+    // pokemonEvolution(){
+    //   if (id != 0,3,6,9){
+    //     return(
+
+    //     )
+    //   }
+    // }
+
     if (listPokemonResult.length === 0){
       return(
         <p className="alert">Cant find this pokemon</p>
@@ -21,6 +30,7 @@ class PokemonDetails extends Component {
       const types = selectedPokemon.types;
       const height = selectedPokemon.height;
       const weight = selectedPokemon.weight;
+      const evolution = evolutionPokemon.name;
       
         return (
           <Fragment>
@@ -32,6 +42,7 @@ class PokemonDetails extends Component {
                 <h2 className="pokemon_detail-name">Name: {name}</h2>                         
                 <p className="pokemon-detail-weight">weight: {weight}</p>
                 <p className="pokemon-detail-height">height: {height}</p>
+                <p>evolution from: {pokemonId == [1,4,7,10] ? "" : evolution}</p>
                 <div className="pokemon_detail-types">
                   <p>Types: </p>
                     <ul className="pokemon_type">
