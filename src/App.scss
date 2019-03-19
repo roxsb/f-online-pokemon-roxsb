@@ -33,19 +33,34 @@
  width: 200px;
 }
 
+.pokemon_img-container{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.pokemon_name{
+  margin-bottom: 5px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  color:black;
+  text-align: center;  
+}
+
 .pokemon_card{
  background-color: rgb(224, 224, 245);
  width: 200px;
- height: 250px;
+ height: 200px;
  display: flex;
  flex-direction: column;
  align-items: center;
  padding-bottom: 15px; 
+ border-radius: 50%;
   transition: color ease 1s, border-color ease 1s;
    &:hover {
     color: red;
-    background-color:rgb(236, 226, 246);
-    
+    background-color:rgb(255, 255, 255);    
     box-shadow: 0 14px 28px rgba(0,0,0,0.25);
   }
 }
@@ -68,6 +83,57 @@
 
 .pokemon_type{
   list-style: none;
+  display:flex;
+  justify-content:center;
+  padding: 0px;
+  width: 100px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-left: 15px;
+  
+}
+
+.pokemon_type-list{
+  background-color: black;
+  color:white;
+  border-radius: 40%;
+  width: 65px;
+  height: 20px;
+  text-align: center;
+  padding: 0px;
+}
+
+.pokemon_evolutions{
+  color:gray;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.pokemon_card-firstcontainer{
+  background-color: red;
+  width: 200px;
+  height: 100px; 
+  width: 200px; 
+  border-radius: 50% / 100% 100% 0 0; 
+}
+
+.style-pokeball{
+  background-color: black;
+  height: 20px;
+  width: 200px;
+}
+
+.pokemon_id{
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color:black;
+  border-color: black;
+  text-align: center;
+  margin: auto;
+  margin-bottom:15px;
 }
 
 

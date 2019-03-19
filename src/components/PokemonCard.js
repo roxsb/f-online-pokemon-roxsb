@@ -7,21 +7,28 @@ class PokemonCard extends Component {
     return (
       <Fragment>
         <div className="pokemon_card">
-          <p className="pokemon_id">{id}</p>      
-          <div className="pokemon_img-container">
-            <img className="pokemon_img" src={image} alt={name} />
-          </div> 
-          <h2 className="pokemon_name">{name}</h2>
-          <div className="pokemon_evolutions">
-            <p>Evoluciona de:{name}</p> 
+          <div className="pokemon_card-firstcontainer">                
+            <div className="pokemon_img-container">
+              <img className="pokemon_img" src={image} alt={name} />
+            </div>
           </div>
-          <ul className="pokemon_type">
-            {types.map((item, index) => {
-              return (
-                <li className="pokemon_type-list" key={index}>{item.type.name}</li>
-                )
-              })}
-          </ul>
+          <div className="style-pokeball">
+            <p className="pokemon_id">{id}</p>
+          </div>           
+          <div className="pokemon_card-secondcontainer">            
+            <h2 className="pokemon_name">{name}</h2>          
+            <ul className="pokemon_type">
+              {types.map((item, index) => {
+                return (
+                  <li className="pokemon_type-list" key={index}>{item.type.name}</li>
+                  )
+                })}
+            </ul>
+            <div className="pokemon_evolutions">
+              <p>Ev.::
+              {name}</p> 
+            </div>
+          </div>
         </div>               
       </Fragment>
     );
